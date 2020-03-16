@@ -1,0 +1,50 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-menu #appMenu="matMenu">
+        <ng-template matMenuContent>
+            <button mat-menu-item (click)="Listar()" >Listar</button>
+            <button mat-menu-item (click)="Nuevo()" >Nuevo</button>
+        </ng-template>
+    </mat-menu> 
+    
+    <button mat-flat-button [matMenuTriggerFor]="appMenu" color = "primary">Menu</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container">
+ 
+
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Login
+            </h3>
+        </div>
+<div class="card-body">
+    <form action="">
+        <div class="form-group">
+            <label for="">Usuario:</label>
+            <input #name type="text" class="form-control">
+        </div>
+        <div class="form-group">
+             <label for="">Password:</label>
+             <input #apellido type="password" class="form-control">
+         </div>
+         <button  class="btn btn-danger">Login</button>
+    </form>
+ </div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<div>
+    <router-outlet  ></router-outlet>
+</div>
+
+
